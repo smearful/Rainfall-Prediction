@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Weather Prediction</title>
+    {% comment %} <link rel="stylesheet" type="text/css" href="{% static 'website/styles.css' %}"> {% endcomment %}
+</head>
+<body>
+    <h1>Weather Prediction</h1>
+    <h2>{{ prediction }} </h2>
+    <p>{{ input_data.temperature_hi }}</p>
+    <p>{{ input_data.temperature_low }}</p>
+    <p>{{ input_data.humidity }}</p>
+    <p>{{ input_data.pressure }}</p>
+</body>
+</html>

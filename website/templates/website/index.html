@@ -1,0 +1,35 @@
+<!-- filepath: c:\VSC Repo\Django\website\templates\website\index.html -->
+ {% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Rainfall Prediction</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'website/styles.css' %}">
+</head>
+<body> 
+    <form action="{% url 'predict' %}" method="post"> 
+        {% csrf_token %}
+        {{ prediction }}
+        <h2>Railfall Prediction Form</h2>
+        
+        <label for="temperature_hi">High Temperature (°C):</label>
+        <input type="text" id="temperature_hi" name="temperature_hi"><br><br>
+    
+        <label for="temperature_low">Low Temperature (°C):</label>
+        <input type="text" id="temperature_low" name="temperature_low"><br><br>
+    
+        <label for="humidity">Humidity (%):</label>
+        <input type="text" id="humidity" name="humidity"><br><br>
+    
+        <label for="pressure">Pressure (mbar):</label>
+        <input type="text" id="pressure" name="pressure"><br><br>
+    
+        <input type="submit" value="Predict">
+    </form>
+    {% comment %} <h1>Welcome to My Website</h1>
+
+    <br>
+    
+    <p>This is a basic Django website with HTML and CSS for predicting Rainfall.</p> {% endcomment %}
+</body>
+</html>
